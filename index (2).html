@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>История Казахстана для школьников</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            padding: 10px;
+            background-color: #34495e;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+    <script>
+        function openSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>История Казахстана для школьников</h1>
+        <p>Упрощённые конспекты и видеоуроки для школьников 5-11 классов</p>
+    </header>
+
+    <nav>
+        <a onclick="openSection('topics')">Темы</a>
+        <a onclick="openSection('summary')">Конспект</a>
+        <a onclick="openSection('videos')">Видео</a>
+    </nav>
+
+    <div class="content">
+        <section id="topics" class="section active">
+            <h2>Темы</h2>
+            <ul>
+                <li>История кочевых народов</li>
+                <li>Образование Казахского ханства</li>
+                <li>Колониальный период</li>
+                <li>Советская эпоха</li>
+                <li>Независимость Казахстана</li>
+            </ul>
+        </section>
+
+        <section id="summary" class="section">
+            <h2>Конспект</h2>
+            <p>Здесь вы найдёте краткие конспекты по каждой теме, чтобы быстро ознакомиться с ключевыми событиями и личностями.</p>
+            <p>Например, <strong>Казахское ханство</strong>: Основатель – Жанибек и Керей, 1465 год, борьба за независимость и укрепление государства...</p>
+        </section>
+
+        <section id="videos" class="section">
+            <h2>Видео</h2>
+            <p>Видео-объяснения, чтобы лучше понять темы. Каждое видео разбито по темам.</p>
+            <video width="320" height="240" controls>
+                <source src="video_example.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео-тег.
+            </video>
+        </section>
+    </div>
+
+    <footer>
+        <p>©️ 2024 История Казахстана для школьников. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
